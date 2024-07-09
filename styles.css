@@ -120,6 +120,23 @@ h4 {
     font-weight: bold;
 }
 
+#language-selector {
+    font-family: 'Space Mono', monospace;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.2em;
+}
+
+.lang-btn {
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.lang-btn:hover {
+    text-decoration: underline;
+}
+
 @media (max-width: 768px) {
     #header-content {
         flex-direction: column;
@@ -131,7 +148,7 @@ h4 {
         height: 66vw;
         max-width: 400px;
         max-height: 400px;
-        margin-top: 10px;
+        margin-top: 40px;
         margin-bottom: 10px;
     }
 
