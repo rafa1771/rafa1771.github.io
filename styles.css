@@ -56,6 +56,12 @@ h4 {
     font-weight: 600;
 }
 
+.university-name {
+    margin-left: 36px;
+    font-weight: 600;
+
+}
+
 .space-mono-bold-italic {
     font-family: 'Space Mono', monospace;
     font-weight: 700;
