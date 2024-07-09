@@ -1,15 +1,25 @@
+:root {
+    --bg-color: #fffefc;
+    --text-color: #333333;
+    --secondary-text-color: #555;
+
+}
+
 body {
-    background-color: #fffefc;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     font-family: 'Open Sans', sans-serif;
 }
 
 .open-sans-regular {
+    color: var(--text-color);
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
 #header-content h1 {
+    color: var(--text-color);
     font-family: 'Inter', sans-serif;
     font-size: 80px;
     font-weight: 900;
@@ -17,6 +27,7 @@ body {
 }
 
 h2 {
+    color: var(--text-color);
     font-family: 'Space Mono', monospace;
     font-weight: 400;
     font-style: normal;
@@ -25,18 +36,20 @@ h2 {
 #header-content h2 {
     font-size: 1.5em;
     margin-bottom: 1em;
-    color: #555;
+    color: var(--secondary-text-color);
 }
 
 h3 {
     font-family: 'Space Mono', monospace;
     font-weight: 700;
     font-style: normal;
+    color: var(--text-color);
 }
 
 h4 {
     font-family: 'Space Mono', monospace;
     text-transform: uppercase;
+    color: var(--text-color);
 }
 
 .emphasis {
@@ -53,7 +66,7 @@ h4 {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fffefc;
+    background-color: var(--bg-color);
     color: #333;
 }
 
@@ -79,10 +92,12 @@ h4 {
 
 #header-text {
     flex: 1;
+    color: var(--text-color);
 }
 
 #cv-container p {
     line-height: 1.6;
+    color: var(--text-color);
 }
 
 #cv-container section {
@@ -91,14 +106,17 @@ h4 {
 
 #cv-container h3 {
     font-size: 1.2em;
-    border-bottom: 2px solid #333;
+    border-bottom: 2px solid var(--text-color);
     padding-bottom: 5px;
     margin-bottom: 10px;
+    color: var(--text-color);
 }
 
 #cv-container ul {
     list-style-type: disc;
     margin-left: 20px;
+    color: var(--text-color);
+
 }
 
 #cv-container ul li {
@@ -118,6 +136,7 @@ h4 {
 #contact a {
     text-align: center;
     font-weight: bold;
+    color: var(--text-color);
 }
 
 #language-selector {
@@ -126,16 +145,37 @@ h4 {
     top: 20px;
     right: 20px;
     font-size: 1.2em;
+    color: var(--text-color);
 }
 
-.lang-btn {
+.lang-btn,
+.mode-btn {
+    font-family: 'Space Mono', monospace;
     cursor: pointer;
     margin: 0 5px;
 }
 
-.lang-btn:hover {
+.lang-btn:hover,
+.mode-btn:hover {
     text-decoration: underline;
 }
+
+#mode-selector {
+    font-family: 'Space Mono', monospace;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 1.2em;
+    color: var(--text-color);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    --bg-color: #333333;
+    --text-color: #fffefc;
+    --secondary-text-color: #d6c7c7;
+}
+
 
 @media (max-width: 768px) {
     #header-content {
@@ -148,8 +188,9 @@ h4 {
         height: 66vw;
         max-width: 400px;
         max-height: 400px;
-        margin-top: 40px;
-        margin-bottom: 10px;
+        margin-top: 60px;
+        margin-bottom: 0;
+        gap: 0;
     }
 
     #header-content h1 {
