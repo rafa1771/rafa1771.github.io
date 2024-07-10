@@ -11,6 +11,13 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+body.dark-mode {
+    --bg-color: #333333;
+    --text-color: #fffefc;
+    --secondary-text-color: #d6c7c7;
+    --link-text-color: #00ffff;
+}
+
 .open-sans-regular {
     color: var(--text-color);
     font-family: 'Open Sans', sans-serif;
@@ -52,14 +59,33 @@ h4 {
     color: var(--text-color);
 }
 
+.education-entry p {
+    margin-bottom: 5px;
+}
+
+.education-entry ul {
+    margin-top: 5px; 
+}
+
+
 .emphasis {
     font-weight: 600;
 }
 
-.university-name {
+.education-name {
+    margin-left: 36px;
+}
+
+.education-name.emphasis {
     margin-left: 36px;
     font-weight: 600;
+}
 
+#education li, #certifications li{
+    /* margin-left: 36px; */
+    margin-top: 0;
+    padding-left: 0;
+    list-style-position: outside;
 }
 
 .space-mono-bold-italic {
@@ -172,15 +198,6 @@ h4 {
     font-size: 1.2em;
     color: var(--text-color);
 }
-
-/* Dark Mode Styles */
-body.dark-mode {
-    --bg-color: #333333;
-    --text-color: #fffefc;
-    --secondary-text-color: #d6c7c7;
-    --link-text-color: #00ffff;
-}
-
 
 @media (max-width: 768px) {
     #header-content {
