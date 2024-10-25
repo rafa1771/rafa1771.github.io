@@ -18,6 +18,10 @@ body.dark-mode {
     --link-text-color: #00ffff;
 }
 
+i {
+    color: var(--secondary-text-color);
+    }
+
 .open-sans-regular {
     color: var(--text-color);
     font-family: 'Open Sans', sans-serif;
@@ -149,6 +153,11 @@ h4 {
     margin-left: 20px;
     color: var(--text-color);
 }
+
+/* #links ul {
+    list-style-type: none;
+    margin-left: 20px;
+} */
 
 #cv-container ul li {
     margin-bottom: 5px;
