@@ -117,7 +117,7 @@
 <section id="projects">
   <h3>Proyectos seleccionados</h3>
   <ul>
-    <li><a href="https://viztnivlir.com" target="_blank">Vizt Nivlir</a> – Sitio web bilingüe de la consultora y blog Asides (2026)</li>
+    <li><a href="https://viztnivlir.com" target="_blank">Vizt Nivlir</a> – Sitio web bilingüe de la consultora y blog <a href="https://asides.viztnivlir.com/" target="_blank">Asides</a> (2026)</li>
     <li><a href="https://alianzaartgallery.com" target="_blank">Alianza Art Gallery</a> – Sitio en WordPress y WooCommerce con tema hijo a medida (próximamente)</li>
     <li><a href="https://adxero.com/" target="_blank">Adxero</a> – Front end en Next.js sobre WordPress headless (2024), actualizado en 2026</li>
     <li><a href="https://shop.revolverwarholgallery.com/" target="_blank">Revolver Shop</a> – Tienda Shopify con componentes Liquid a medida (2024)</li>
@@ -133,7 +133,7 @@
     <li>SEO y analítica: redacción SEO, datos estructurados (JSON-LD), SE Ranking, Google Tag Manager y GA4, gestión del consentimiento (RGPD, Termly, Complianz)</li>
     <li>Gestión de contenidos digitales</li>
     <li>Desarrollo web: HTML, HTMX, CSS, PHP, Liquid, JavaScript, TypeScript, Python</li>
-    <li>Frameworks: React, Next.js, Flask, FastAPI</li>
+    <li>Frameworks: React, Next.js, JAMstack (Eleventy, Nunjucks), Flask, FastAPI</li>
     <li>Plataformas: WordPress, Shopify, Zoho CRM y Campaigns (Deluge), Google Apps Script</li>
     <li>Datos y alojamiento: PostgreSQL; Vercel, Render, AWS, Google Cloud, DigitalOcean</li>
     <li>IA y automatización: APIs de modelos de lenguaje (Claude, OpenAI, Gemini, Perplexity), recuperación de información (RAG), diseño de flujos agénticos, aprobación humana, LangChain</li>
@@ -242,7 +242,8 @@
         });
 
         document.body.addEventListener('htmx:afterSwap', function(evt) {
-            const lang = evt.detail.elt.getAttribute('hreflang');
+            // In htmx 2, detail.elt is the swap target; the clicked link is on requestConfig.
+            const lang = evt.detail.requestConfig.elt.getAttribute('hreflang');
             if (lang) syncLang(lang);
         });
 

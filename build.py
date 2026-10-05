@@ -115,7 +115,8 @@ TEMPLATE = """<!DOCTYPE html>
         }});
 
         document.body.addEventListener('htmx:afterSwap', function(evt) {{
-            const lang = evt.detail.elt.getAttribute('hreflang');
+            // In htmx 2, detail.elt is the swap target; the clicked link is on requestConfig.
+            const lang = evt.detail.requestConfig.elt.getAttribute('hreflang');
             if (lang) syncLang(lang);
         }});
 
