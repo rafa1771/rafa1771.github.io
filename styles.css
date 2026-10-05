@@ -232,3 +232,6 @@ h4 {
         font-size: 1.2em;
     }
 }
+#language-selector a.lang-btn {
+    color: var(--text-color);
+}
